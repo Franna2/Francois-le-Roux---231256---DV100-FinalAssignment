@@ -2,35 +2,63 @@
 // Cruises Array
 // ------------------------------------------------------------------------
 
-const arrCruises = [
+// Data representing cruises
+const cruises = [
   {
     name: "Cape Town Getaway",
-    price: 25000,
-    description: "Escape to the stunning city of Cape Town, where the iconic Table Mountain meets the vast blue ocean.",
-    image: "cruise1-image.png",
-    duration: "5 days",
-    departure: "Durban, ZA",
-    destination: "Cape Town, ZA"
+    price: "ZAR 25,000",
+    duration: 7,
+    destinations: 1,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Escape to the stunning city of Cape Town..."
   },
   {
-    name: "Garden Route Adventure",
-    price: 18000,
-    description: "Discover the natural wonders along the Garden Route, from lush forests to pristine beaches.",
-    image: "cruise2-image.png",
-    duration: "7 days",
-    departure: "Port Elizabeth, ZA",
-    destination: "Knysna, ZA"
+    name: "Durban Discovery",
+    price: "ZAR 18,500",
+    duration: 4,
+    destinations: 1,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Experience the vibrant culture and beaches of Durban..."
   },
   {
-    name: "Drakensberg Retreat",
-    price: 30000,
-    description: "Embark on a serene journey to the majestic Drakensberg Mountains, where breathtaking landscapes await.",
-    image: "cruise3-image.png",
-    duration: "6 days",
-    departure: "Durban, ZA",
-    destination: "Drakensberg, ZA"
+    name: "Garden Route Expedition",
+    price: "ZAR 32,800",
+    duration: 10,
+    destinations: 3,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Explore the breathtaking landscapes of the Garden Route..."
   },
-  // Add more cruises here...
+  {
+    name: "Kruger National Park Safari",
+    price: "ZAR 40,200",
+    duration: 8,
+    destinations: 1,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Embark on an unforgettable safari adventure in Kruger National Park..."
+  },
+  {
+    name: "Cape Winelands Escape",
+    price: "ZAR 28,900",
+    duration: 6,
+    destinations: 1,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Indulge in the finest wines and scenic beauty of the Cape Winelands..."
+  },
+  {
+    name: "Wild Coast Retreat",
+    price: "ZAR 22,750",
+    duration: 5,
+    destinations: 1,
+    roundTrip: true,
+    rowBoatSpecial: false,
+    description: "Experience the untouched beauty of the Wild Coast and its beaches..."
+  },
+  // Add more trips here...
 ];
 
 let appliedFilter = "";
@@ -150,6 +178,59 @@ function filterSortCruises() {
 
   loadCruises(filteredSortedArrCruises);
 }
+
+const cruiseCardTemplate = document.getElementById("cruiseCardTemplate");
+const cruisesContainer = document.getElementById("cruisesContainer");
+
+function renderCruiseCard(cruise) {
+  const cardClone = document.importNode(cruiseCardTemplate.content, true);
+  const card = cardClone.querySelector(".card");
+  card.querySelector("#nameText").textContent = cruise.name;
+  card.querySelector("#priceText").textContent = cruise.price;
+  card.querySelector("#destinationTemp").textContent = cruise.destinations + " Destinations";
+  card.querySelector("#descriptionText").textContent = cruise.description;
+  return card;
+}
+
+function filterCruises(filterType) {
+  cruisesContainer.innerHTML = "";
+  
+  if (filterType === "all") {
+    cruises.forEach(cruise => {
+      cruisesContainer.appendChild(renderCruiseCard(cruise));
+    });
+  } else {
+    const filteredCruises = cruises.filter(cruise => {
+      if (filterType === "short") {
+        return cruise.duration <= 5;
+      } else if (filterType === "long") {
+        return cruise.duration > 5;
+      } else if (filterType === "single") {
+        return cruise.destinations === 1;
+      } else if (filterType === "multi") {
+        return cruise.destinations > 1;
+      } else if (filterType === "round") {
+        return cruise.roundTrip;
+      } else if (filterType === "rowBoat") {
+        return cruise.rowBoatSpecial;
+      }
+    });
+
+    filteredCruises.forEach(cruise => {
+      cruisesContainer.appendChild(renderCruiseCard(cruise));
+    });
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  filterCruises("all");
+
+  document.querySelectorAll('input[name="filterRadio"]').forEach(radio => {
+    radio.addEventListener("change", event => {
+      filterCruises(event.target.id.replace("Filter", "").toLowerCase());
+    });
+  });
+});
 
 // ------------------------------------------------------------------------
 // When a cruise card is clicked
