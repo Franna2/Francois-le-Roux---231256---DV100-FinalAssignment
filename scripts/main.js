@@ -7,11 +7,12 @@ const cruises = [
   {
     name: "Cape Town Getaway",
     price: "ZAR 25,000",
+    image: "CTG.jpg",
     duration: 7,
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Escape to the stunning city of Cape Town..."
+    description: "Escape to the stunning city of Cape Town."
   },
   {
     name: "Durban Discovery",
@@ -20,7 +21,7 @@ const cruises = [
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Experience the vibrant culture and beaches of Durban..."
+    description: "Experience the vibrant culture and beaches of Durban."
   },
   {
     name: "Garden Route Expedition",
@@ -29,7 +30,7 @@ const cruises = [
     destinations: 3,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Explore the breathtaking landscapes of the Garden Route..."
+    description: "Explore the breathtaking landscapes of the Garden Route."
   },
   {
     name: "Kruger National Park Safari",
@@ -38,7 +39,7 @@ const cruises = [
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Embark on an unforgettable safari adventure in Kruger National Park..."
+    description: "Embark on an unforgettable safari adventure in Kruger National Park."
   },
   {
     name: "Cape Winelands Escape",
@@ -47,7 +48,7 @@ const cruises = [
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Indulge in the finest wines and scenic beauty of the Cape Winelands..."
+    description: "Indulge in the finest wines and scenic beauty of the Cape Winelands."
   },
   {
     name: "Wild Coast Retreat",
@@ -56,7 +57,7 @@ const cruises = [
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Experience the untouched beauty of the Wild Coast and its beaches..."
+    description: "Experience the untouched beauty of the Wild Coast and its beaches."
   },
   // Add more trips here...
 ];

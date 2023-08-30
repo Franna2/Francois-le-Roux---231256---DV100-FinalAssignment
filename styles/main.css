@@ -95,6 +95,18 @@ button {
     color: #000000;
 }
 
+.cruise-card-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .cruise-card {
+    flex-basis: calc(50% - 15px);
+    margin-bottom: 20px;
+  }
+  
+
 /* Home Page */
 
 .hero-image {
