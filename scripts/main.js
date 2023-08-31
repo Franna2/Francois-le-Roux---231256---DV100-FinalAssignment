@@ -7,7 +7,7 @@ const cruises = [
   {
     name: "Cape Town Getaway",
     price: "ZAR 25,000",
-    image: "CTG.jpg",
+    image: "Cruise1.jpg",
     duration: 7,
     destinations: 1,
     roundTrip: true,
@@ -17,6 +17,7 @@ const cruises = [
   {
     name: "Durban Discovery",
     price: "ZAR 18,500",
+    image: "Cruise2.jpg",
     duration: 4,
     destinations: 1,
     roundTrip: true,
@@ -26,6 +27,7 @@ const cruises = [
   {
     name: "Garden Route Expedition",
     price: "ZAR 32,800",
+    image: "DD.jpg",
     duration: 10,
     destinations: 3,
     roundTrip: true,
@@ -35,6 +37,7 @@ const cruises = [
   {
     name: "Kruger National Park Safari",
     price: "ZAR 40,200",
+    image: "DD.jpg",
     duration: 8,
     destinations: 1,
     roundTrip: true,
@@ -44,6 +47,7 @@ const cruises = [
   {
     name: "Cape Winelands Escape",
     price: "ZAR 28,900",
+    image: "DD.jpg",
     duration: 6,
     destinations: 1,
     roundTrip: true,
@@ -53,6 +57,7 @@ const cruises = [
   {
     name: "Wild Coast Retreat",
     price: "ZAR 22,750",
+    image: "DD.jpg",
     duration: 5,
     destinations: 1,
     roundTrip: true,
