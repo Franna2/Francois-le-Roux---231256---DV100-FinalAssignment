@@ -5,7 +5,7 @@
 // Data representing cruises
 const cruises = [
   {
-    name: "Cape Town Getaway",
+    wishlistCruiseame: "Cape Town Getaway",
     price: "ZAR 25,000",
     image: "Cruise1.jpg",
     duration: 7,

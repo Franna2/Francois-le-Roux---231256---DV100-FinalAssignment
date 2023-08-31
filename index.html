@@ -97,12 +97,28 @@
     </button>
   </div>
 
-  
-<!-- Include your API key here -->
+
+<!-- API key here -->
 <script>
-  // Replace 'YOUR_API_KEY' with your actual API key
-  const apiKey = 'YOUR_API_KEY';
+  const apiKey = 'b40a7ff93e8541ca3aa3132dc29bf8cf'; // Replace with actual API key
 </script>
+
+<script>
+  $(document).ready(function(){
+    $.ajax({
+      type: "GET",
+      url: `https://api.openweathermap.org/data/2.5/weather?q=SouthAfrica&appid=${b40a7ff93e8541ca3aa3132dc29bf8cf}`,
+      success: function(data){
+        const temperature = data.main.temp;
+        console.log(temperature);
+        
+        // Update the temperature on the webpage
+        $("#testingAPI").text(`Temperature in SouthAfrica: ${temperature} K`);
+      }
+    });
+  });
+</script>
+
 
 <!-- Javascript -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
