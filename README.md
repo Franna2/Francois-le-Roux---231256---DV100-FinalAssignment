@@ -3,3 +3,18 @@
 
 Screenshots and Demonstration video
 https://drive.google.com/drive/folders/1-udY8dULk45oTce1PbZOobADG7gFEOLo?usp=drive_link
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+I wasn't able to give alot of attention to the assignment becuase of my other subjects.
