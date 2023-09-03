@@ -1,75 +1,92 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CruiseVista - Wishlist</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Purchases</title>
+    <link rel="stylesheet" href="styles.css">
 
-  <!-- Style Sheets -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/main.css">
+    <!-- Style Sheets -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-
-  <!-- Nav Bar -->
-  <nav class="navbar fixed-top">
-    <div class="container">
-
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="assets/Group 6.svg" alt="CruiseVista Logo" height="60">
-      </a>
-
-      <!-- Nav Items -->
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="browse-destination.html">Browse</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="wishlist-bookings.html">Booking</a>
-        </li>
-      </ul>
-
-    </div>
-  </nav>
-
-  <!-- Wishlist Content -->
-  <div class="container mt-5 pt-5">
-
-    <!-- Header -->
-    <h2>Your Cruise Wishlist</h2>
-    <h5 id="temp" class="priMed fs04 italics">Dream Cruises Await</h5>
-    
-    <!-- Wishlist Cruises List Cards -->
-    <div class="row py-5 gy-3" id="wishlistCruisesContainer">
-      <!-- Wishlist cruises cards are appended here -->
-    </div>
-
-  </div>
-
-  <!-- Wishlist Cruise Card Template -->
-  <template id="wishlistCruiseCardTemplate">
-    <div class="col-4 animate__animated animate__fadeInUp">
-      <!-- Card -->
-      <div class="card">
-        <img src="assets/Cruise1.jpg" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h4 class="card-title" id="wishlistCruiseNameText">CapeTown Getaway</h4>
-          <p class="card-text" id="wishlistCruisePriceText">R25,000</p>
-          <p class="card-text mt-4" id="wishlistCruiseDescriptionText">Escape to the stunning city of Cape Town.</p>
+    <!-- Nav Bar -->
+    <nav class="navbar fixed-top">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/Group 6.svg" alt="CruiseVista Logo" height="60">
+            </a>
+            <!-- Nav Items -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="browse-destination.html">Browse Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="wishlist-bookings.html">Booking</a>
+                </li>
+            </ul>
         </div>
-      </div>
+    </nav>
+
+    <!-- Wishlist Content -->
+    <div class="container mt-5 pt-5">
+        <!-- Header -->
+        <h2>Your Cruise Wishlist</h2>
+        <h5 id="temp" class="priMed fs04 italics">Dream Cruises Await</h5>
+        <!-- Wishlist Cruises List Cards -->
+        <div class="row py-5 gy-3" id="wishlistCruisesContainer">
+            <!-- Wishlist cruises cards are appended here -->
+        </div>
     </div>
-  </template>
 
-  <!-- Javascript -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-  <script src="scripts/main.js"></script>
+    <!-- Wishlist Cruise Card Template -->
+    <template id="wishlistCruiseCardTemplate">
+        <div class="col-4 animate__animated animate__fadeInUp">
+            <!-- Card -->
+            <div class="card">
+                <img src="assets/Cruise1.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h4 class="card-title" id="wishlistCruiseNameText">CapeTown Getaway</h4>
+                    <p class="card-text" id="wishlistCruisePriceText">R25,000</p>
+                    <p class="card-text mt-4" id="wishlistCruiseDescriptionText">Escape to the stunning city of Cape Town.</p>
+                </div>
+            </div>
+        </div>
+    </template>
 
+    <!-- Your original code continues here -->
+
+    <h1>Your Purchases</h1>
+    <table id="purchase-table">
+        <thead>
+            <tr>
+                <th>Trip Code</th>
+                <th>Ticket Quantity</th>
+                <th>Total Cost</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Table rows will be added dynamically using JavaScript -->
+        </tbody>
+    </table>
+    <button id="remove-all-button">Remove All</button>
+    <button id="purchase-button">Purchase</button>
+    <div id="success-message" class="hidden">Successful Purchase!</div>
+
+    <script src="script.js"></script>
+
+    <!-- JavaScript and jQuery for the second part of the code -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
 </body>
 </html>

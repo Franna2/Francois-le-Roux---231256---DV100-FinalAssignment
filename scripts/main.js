@@ -25,44 +25,44 @@ const cruises = [
     description: "Experience the vibrant culture and beaches of Durban."
   },
   {
-    name: "Garden Route Expedition",
+    name: "Ocean Voyage Cruises",
     price: "ZAR 32,800",
     image: "DD.jpg",
     duration: 10,
     destinations: 3,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Explore the breathtaking landscapes of the Garden Route."
+    description: "Embark on a journey across the open seas with OceanVoyage Cruises, where every voyage is an adventure waiting to be discovered."
   },
   {
-    name: "Kruger National Park Safari",
+    name: "South Africa Seafarers",
     price: "ZAR 40,200",
     image: "DD.jpg",
     duration: 8,
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Embark on an unforgettable safari adventure in Kruger National Park."
+    description: "Experience the rich and diverse beauty of South Africa's coastline as you set sail with South Africa Seafarers."
   },
   {
-    name: "Cape Winelands Escape",
+    name: "African Odyssey Cruises",
     price: "ZAR 28,900",
     image: "DD.jpg",
     duration: 6,
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Indulge in the finest wines and scenic beauty of the Cape Winelands."
+    description: "Embark on an epic odyssey through Africa's coastal treasures, where history and nature converge in breathtaking harmony."
   },
   {
-    name: "Wild Coast Retreat",
+    name: "Cape Breeze Cruises",
     price: "ZAR 22,750",
     image: "DD.jpg",
-    duration: 5,
+    duration: 14,
     destinations: 1,
     roundTrip: true,
     rowBoatSpecial: false,
-    description: "Experience the untouched beauty of the Wild Coast and its beaches."
+    description: "Let the gentle Cape Breeze carry you away on luxurious cruises along the stunning coasts of Africa."
   },
   // Add more trips here...
 ];
@@ -253,3 +253,121 @@ $("#cruisesContainer").on('click','.card', function() {
   $(this).find(".card-img-top").toggleClass("small");
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  const purchaseTable = document.getElementById("purchase-table");
+  const removeAllButton = document.getElementById("remove-all-button");
+  const purchaseButton = document.getElementById("purchase-button");
+  const successMessage = document.getElementById("success-message");
+
+  removeAllButton.addEventListener("click", function() {
+      const tbody = purchaseTable.querySelector("tbody");
+      tbody.innerHTML = "";
+  });
+
+  purchaseButton.addEventListener("click", function() {
+      successMessage.classList.remove("hidden");
+  });
+
+  purchaseTable.addEventListener("click", function(e) {
+      if (e.target && e.target.nodeName == "BUTTON") {
+          // Remove the row when the remove button is clicked
+          e.target.closest("tr").remove();
+      }
+  });
+
+  // Function to add a new row to the table
+  function addTableRow(tripCode, ticketQuantity, totalCost) {
+      const tbody = purchaseTable.querySelector("tbody");
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
+          <td>${tripCode}</td>
+          <td>${ticketQuantity}</td>
+          <td>${totalCost}</td>
+          <td><button class="remove-button">Remove</button></td>
+      `;
+      tbody.appendChild(newRow);
+  }
+
+  // Example: Adding rows to the table
+  addTableRow("Durban Discovery", 2, "R37,000");
+  addTableRow("DEF456", 1, "$50");
+});
+
+
+// Sample trip data (you can replace this with your actual data)
+const trips = [
+  { name: 'Trip 1', details: 'Details for Trip 1' },
+  { name: 'Trip 2', details: 'Details for Trip 2' },
+  { name: 'Trip 3', details: 'Details for Trip 3' },
+];
+
+const tripOptionsContainer = document.querySelector('.trip-options');
+const tripDetailsContainer = document.querySelector('.trip-details');
+const purchaseButton = document.getElementById('purchase-button');
+
+// Function to populate trip options
+function populateTripOptions() {
+  tripOptionsContainer.innerHTML = '';
+  trips.forEach((trip, index) => {
+      const tripOption = document.createElement('div');
+      tripOption.classList.add('trip-option');
+      tripOption.innerText = trip.name;
+
+      tripOption.addEventListener('click', () => {
+          // Reset all trip options
+          tripOptionsContainer.querySelectorAll('.trip-option').forEach((option) => {
+              option.classList.remove('active');
+          });
+
+          // Highlight the selected trip
+          tripOption.classList.add('active');
+
+          // Display additional information on the selected trip
+          tripDetailsContainer.innerHTML = `<p>${trip.details}</p>`;
+          purchaseButton.classList.add('active');
+      });
+
+      tripOptionsContainer.appendChild(tripOption);
+  });
+}
+
+// Initialize the trip options
+populateTripOptions();
+
+
+// JavaScript for dynamic content
+
+// Function to update the header text when the document is ready
+document.addEventListener("DOMContentLoaded", function() {
+  const headerText = document.getElementById("header-text");
+  headerText.textContent = "Welcome to Your Cruise Name";
+});
+
+// Function to fetch and display weather data from Open Weather API
+function fetchWeatherData() {
+  // Replace 'YOUR_API_KEY' with your actual Open Weather API key
+  const apiKey = 'YOUR_API_KEY';
+  const city = 'YourCity'; // Replace with the desired city
+  const weatherDataElement = document.getElementById("weather-data");
+
+  // Construct the API URL
+  const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+
+  // Make a fetch request to the API
+  fetch(apiUrl)
+      .then(response => response.json())
+      .then(data => {
+          // Extract and display relevant weather information
+          const temperature = data.main.temp;
+          const description = data.weather[0].description;
+          weatherDataElement.innerHTML = `<p>Weather in ${city}: ${temperature}°C, ${description}</p>`;
+      })
+      .catch(error => {
+          console.error("Error fetching weather data:", error);
+          weatherDataElement.innerHTML = "<p>Weather data unavailable</p>";
+      });
+}
+
+// Call the function to fetch weather data when the page loads
+fetchWeatherData();

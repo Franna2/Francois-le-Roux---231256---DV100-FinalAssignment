@@ -1,130 +1,225 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CruiseVista - Your Window to the Sea</title>
-
-  <!-- Style Sheets -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-  <link rel="stylesheet" href="styles/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Your Cruise Line</title>
+    <!-- Your custom stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-
-  <!-- Nav Bar -->
-  <nav class="navbar fixed-top">
-    <div class="container">
-
-      <!-- Logo -->
-      <a class="navbar-brand" href="#">
-        <img src="assets/Group 6.svg" alt="CruiseVista Logo" height="60">
-      </a>
-
-      <!-- Nav Items -->
-      <ul class="nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="browse-destination.html">Destinations</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="wishlist-bookings.html">Bookings</a>
-        </li>
-      </ul>
-
-    </div>
-  </nav>
-
-  <!-- Carousel -->
-  <div id="carouselExample" class="carousel carousel-dark slide">
-    <div class="carousel-inner">
-      <!-- Slide 1 -->
-      <div class="carousel-item active">
+    <!-- Nav Bar -->
+    <nav class="navbar fixed-top">
         <div class="container">
-          <div class="row full-height">
-            <div class="col align-self-center">
-              <h1>Embark on a Journey of Discovery</h1>
-              <button class="mt-4">Explore Cruises</button>
-            </div>
-            <div class="col align-self-end">
-              <img src="assets/Cruise-hero1-image.jpg" class="hero-image" id="hero-image">
-            </div>
-          </div>
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/Group 6.svg" alt="CruiseVista Logo" height="60">
+            </a>
+            <!-- Nav Items -->
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="browse-destination.html">Destinations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="wishlist-bookings.html">Bookings</a>
+                </li>
+            </ul>
         </div>
+    </nav>
+
+    <!-- Carousel -->
+    <div id="carouselExample" class="carousel carousel-dark slide">
+      <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+              <div class="container">
+                  <div class="row full-height">
+                      <div class="col align-self-center">
+                          <h1>Embark on a Journey of Discovery</h1>
+                          <button class="mt-4">Explore Cruises</button>
+                      </div>
+                      <div class="col align-self-end">
+                          <img src="assets/Cruise-hero1-image.jpg" class="hero-image" id="hero-image">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-item full-height">
+              <div class="container">
+                  <div class="row full-height">
+                      <div class="col align-self-center">
+                          <h1>Experience Luxury at Sea</h1>
+                          <button class="mt-4">View Amenities</button>
+                      </div>
+                      <div class="col align-self-end">
+                          <img src="assets/amenties.jpg" class="hero-image" id="hero-image">
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Slide 3 -->
+          <div class="carousel-item full-height">
+              <div class="container">
+                  <div class="row full-height">
+                      <div class="col align-self-center">
+                          <h1>Your Dream Vacation Awaits</h1>
+                          <button class="mt-4">Book Now</button>
+                      </div>
+                      <div class="col align-self-end">
+                          <img src="assets/room.jpg" class="hero-image" id="hero-image">
+                      </div>
+                  </div>
+              </div>
+          </div>
       </div>
 
-      <!-- Slide 2 -->
-      <div class="carousel-item full-height">
-        <div class="container">
-          <div class="row full-height">
-            <div class="col align-self-center">
-              <h1>Experience Luxury at Sea</h1>
-              <button class="mt-4">View Amenities</button>
-            </div>
-            <div class="col align-self-end">
-              <img src="assets/amenties.jpg" class="hero-image" id="hero-image">
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Slide 3 -->
-      <div class="carousel-item full-height">
-        <div class="container">
-          <div class="row full-height">
-            <div class="col align-self-center">
-              <h1>Your Dream Vacation Awaits</h1>
-              <button class="mt-4">Book Now</button>
-            </div>
-            <div class="col align-self-end">
-              <img src="assets/room.jpg" class="hero-image" id="hero-image">
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+      </button>
   </div>
 
+    <!-- Header with Dynamic Text -->
+    <h1 id="header-text">Vacation Cruises</h1>
 
-<!-- API key here -->
-<script>
-  const apiKey = 'b40a7ff93e8541ca3aa3132dc29bf8cf'; // Replace with actual API key
-</script>
+    <!-- Weather Data -->
+    <div id="weather-data">
+        <!-- Weather information will be inserted here using JavaScript -->
+    </div>
 
-<script>
-  $(document).ready(function(){
-    $.ajax({
-      type: "GET",
-      url: `https://api.openweathermap.org/data/2.5/weather?q=SouthAfrica&appid=${b40a7ff93e8541ca3aa3132dc29bf8cf}`,
-      success: function(data){
-        const temperature = data.main.temp;
-        console.log(temperature);
-        
-        // Update the temperature on the webpage
-        $("#testingAPI").text(`Temperature in SouthAfrica: ${temperature} K`);
-      }
-    });
-  });
-</script>
+    <!-- Accordion Sections -->
+    <div class="accordion">
+        <!-- Accordion section 1: Cruise Map -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="map-heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#map-collapse" aria-expanded="true" aria-controls="map-collapse">
+                    Cruise Map
+                </button>
+            </h2>
+            <div id="map-collapse" class="accordion-collapse collapse show" aria-labelledby="map-heading">
+                <div class="accordion-body">
+                    <!-- Content for Cruise Map -->
+                </div>
+            </div>
+        </div>
 
+        <!-- Accordion section 2: Additional Information -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="info-heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#info-collapse" aria-expanded="true" aria-controls="info-collapse">
+                    Additional Information
+                </button>
+            </h2>
+            <div id="info-collapse" class="accordion-collapse collapse" aria-labelledby="info-heading">
+                <div class="accordion-body">
+                    <!-- Content for Additional Information -->
+                    <h2>Additional Information</h2>
 
-<!-- Javascript -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-<script src="scripts/main.js"></script>
+                    <h3>Booking Terms and Conditions</h3>
+                    <p>Before booking your cruise with CruiseVista, please review our <a href="terms_and_conditions.html">Booking Terms and Conditions</a> for important information regarding cancellations, refunds, and other policies.</p>
 
+                    <h3>Contact Us</h3>
+                    <p>If you can't find the information you need, don't hesitate to <a href="contact_us.html">contact us</a> directly. Our dedicated customer support team is ready to assist you.</p>
+                
+                    <h3>Privacy Policy</h3>
+                    <p>Your privacy is important to us. Learn about how we handle your data by reading our <a href="privacy_policy.html">Privacy Policy</a>.</p>
+                
+                    <h3>Stay Connected</h3>
+                    <p>Stay connected with CruiseVista by following us on social media for the latest updates, exclusive offers, and travel inspiration.</p>
+                  
+                </div>
+            </div>
+        </div>
+
+        <!-- Accordion section 3: FAQ -->
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="faq-heading">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse" aria-expanded="true" aria-controls="faq-collapse">
+                    FAQ
+                </button>
+            </h2>
+            <div id="faq-collapse" class="accordion-collapse collapse" aria-labelledby="faq-heading">
+                <div class="accordion-body">
+                    <!-- Content for FAQ -->
+                    <h2>FAQ - CruiseVista</h2>
+
+                    <h3>1. What is CruiseVista?</h3>
+                    <p>CruiseVista is your premier online destination for booking and exploring the world of cruise vacations. We offer a wide range of cruise options, destinations, and information to help you plan your dream cruise.</p>
+                
+                    <h3>2. How do I book a cruise on CruiseVista?</h3>
+                    <p>Booking a cruise on CruiseVista is easy. Simply use our user-friendly search and booking tools to find the cruise that suits your preferences. Follow the prompts to select your cruise, cabin, and any additional amenities, then proceed to secure your reservation.</p>
+                
+                    <h3>3. What types of cruises are available on CruiseVista?</h3>
+                    <p>CruiseVista offers a diverse selection of cruises, including ocean cruises, river cruises, and themed cruises. You can explore destinations worldwide, from tropical paradises to cultural hubs.</p>
+                
+                    <h3>4. Can I customize my cruise experience?</h3>
+                    <p>Absolutely! CruiseVista allows you to personalize your cruise experience by choosing cabin categories, dining preferences, and optional excursions. You can make your cruise uniquely yours.</p>
+                
+                    <h3>5. What is included in the cruise fare?</h3>
+                    <p>The inclusions vary depending on the cruise line and itinerary you choose. Commonly included are accommodations, meals, onboard entertainment, and access to amenities. Check the specific cruise details for more information.</p>
+                
+                    <h3>6. Is there a minimum age requirement for booking a cruise on CruiseVista?</h3>
+                    <p>Age requirements can vary by cruise line and itinerary. Some cruises cater to families with children, while others may have adults-only policies. Please review the cruise details for age-related information.</p>
+                
+                    <h3>7. How can I contact CruiseVista for assistance?</h3>
+                    <p>You can reach our dedicated customer support team through our Contact Us page. We're here to help with any questions, concerns, or special requests you may have.</p>
+                
+                    <h3>8. What payment options are available on CruiseVista?</h3>
+                    <p>CruiseVista accepts a variety of payment methods, including major credit cards and online payment platforms. Your payment details are securely processed to ensure a safe booking experience.</p>
+                
+                    <h3>9. Do I need travel insurance for my cruise booking?</h3>
+                    <p>While travel insurance is not mandatory, we highly recommend it for your peace of mind. Travel insurance can protect you against unforeseen circumstances and provide coverage for trip cancellations, medical emergencies, and more.</p>
+                
+                    <h3>10. How can I stay updated on the latest cruise deals and promotions?</h3>
+                    <p>To stay informed about exclusive cruise deals and promotions, sign up for our newsletter and follow us on social media. CruiseVista regularly shares exciting offers and cruise news.</p>
+                
+               </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <!-- API key here -->
+    <script>
+        const apiKey = 'b40a7ff93e8541ca3aa3132dc29bf8cf'; // Replace with actual API key
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                type: "GET",
+                url: `https://api.openweathermap.org/data/2.5/weather?q=SouthAfrica&appid=${apiKey}`,
+                success: function(data){
+                    const temperature = data.main.temp;
+                    console.log(temperature);
+
+                    // Update the temperature on the webpage
+                    $("#weather-data").text(`Temperature in SouthAfrica: ${temperature} K`);
+                }
+            });
+        });
+    </script>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- Add any additional JavaScript files or scripts as needed -->
 </body>
 </html>

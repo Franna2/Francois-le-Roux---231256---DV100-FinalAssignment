@@ -5,7 +5,7 @@
 /* Global Styles */
 
 /* Fonts */
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: 'Pacifico', cursive;
 }
 
@@ -55,7 +55,8 @@ button {
     background-color: #E6F2E9;
 }
 
-.carousel-control-next, .carousel-control-prev {
+.carousel-control-next,
+.carousel-control-prev {
     top: auto;
     right: auto;
     left: 24px;
@@ -81,14 +82,14 @@ button {
 }
 
 .card-img-top {
-    width:auto;
-    height:320px;
+    width: auto;
+    height: 320px;
     margin: auto;
-    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1); 
+    transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .card-img-top.small {
-    height:200px;
+    height: 200px;
 }
 
 .card-text {
@@ -99,18 +100,77 @@ button {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-  }
-  
-  .cruise-card {
+}
+
+.cruise-card {
     flex-basis: calc(50% - 15px);
     margin-bottom: 20px;
-  }
-  
+}
 
 /* Home Page */
 
 .hero-image {
-    height: 90vh; 
+    height: 90vh;
     position: relative;
     bottom: -100px;
+}
+
+/* Additional Styles */
+
+/* Add your styles for the filter, trip options, and trip details here */
+/* Example styles */
+.trip-filter {
+    /* Your filter styles */
+}
+
+.trip-options {
+    display: flex;
+    /* Your trip options styles */
+}
+
+.trip-option {
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.trip-option.active {
+    background-color: #f0f0f0;
+}
+
+.hidden {
+    display: none;
+}
+
+#purchase-button.active {
+    display: block;
+}
+
+.trip-details {
+    /* Your trip details styles */
+}
+
+/* Add your CSS styles here */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+button {
+    margin: 10px;
+}
+
+.hidden {
+    display: none;
 }
