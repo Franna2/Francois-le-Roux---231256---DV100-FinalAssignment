@@ -1,20 +1,7 @@
 # Francois-le-Roux---231256---DV100-FinalAssignment
 
+Demonstation Video: https://drive.google.com/file/d/1OWeoupohlBWjabp1Sv3huyxV6YfObMfk/view?usp=drive_link
 
-Screenshots and Demonstration video
+
+All the screenshots, Demo video and Signed Plagiarism document can be found i nthe link below.
 https://drive.google.com/drive/folders/1-udY8dULk45oTce1PbZOobADG7gFEOLo?usp=drive_link
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-I wasn't able to give alot of attention to the assignment becuase of my other subjects.
